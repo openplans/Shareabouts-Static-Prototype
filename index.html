@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Shareabouts</title>
+  <meta name="description" content="Shareabouts is awesome!">
+  <meta name="author" content="">
+
+  <!--  Mobile Viewport Fix -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory (don't link them here): mathiasbynens.be/notes/touch-icons -->
+
+  <!--  Google WebFonts -->
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+  <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.ie.css" />
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <header id="site-header" class="clearfix">
+    <h1 id="site-title"><a href="#">Shareabouts</a></h1>
+
+    <div id="user-menu">
+      <small>Sign in with</small> <a href="#" class="login facebook-login">Facebook</a> <span class="hidden">or</span> <a href="#" class="login twitter-login">Twitter</a><span class="hidden">.</span>
+    </div>
+
+    <nav id="access" role="article">
+      <ul class="menu">
+        <li class="menu-item menu-item-1"><a href="#">Link One</a></li>
+        <li class="menu-item menu-item-2">
+          <a href="#">Link Two</a>
+          <ul>
+            <li class="menu-item menu-item-5"><a href="#">Link Five</a></li>
+            <li class="menu-item menu-item-6"><a href="#">Link Six</a></li>
+          </ul>          
+        </li>
+        <li class="menu-item menu-item-3"><a href="#">Link Three</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div role="main" id="main">
+    <div id="map-container">
+      <div id="map"></div>
+      <a href="#" class="add-feature-point">Add a location!</a>
+    </div>
+
+    <div id          = "content">
+      <a href        = "#" class="close-bttn">&times;<span> Close</span></a>
+      <article class = "point"><!-- .point or .page -->
+        <header>
+          <h1>Awesome Point Title</h1>
+        </header>
+
+        <section class="discussion">
+          <ol class="comments">
+            <li>
+              <article class="comment">
+                <header class="comment-header">
+                  <img class="avatar" src="http://placehold.it/50" />
+                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
+                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                </header>
+                <div class="comment-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="comment">
+                <header class="comment-header">
+                  <img class="avatar" src="http://placehold.it/50" />
+                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
+                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                </header>
+                <div class="comment-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="comment">
+                <header class="comment-header">
+                  <img class="avatar" src="http://placehold.it/50" />
+                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
+                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                </header>
+                <div class="comment-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </article>
+            </li>
+          </ol>
+        </section><!-- end .discussion -->
+      </article>
+    </div><!-- end #content -->
+  </div><!-- end #main -->
+
+  <div id="ticker">
+    <ul>
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Long Island City</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Astoria</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Long Island City</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Astoria</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Long Island City</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Astoria</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Manhattan</a>
+      </li>
+
+      <li class="clearfix" data-id="137" data-feature-id="68">
+        <img class="avatar" src="http://placehold.it/28" />
+        <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
+        <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
+      </li>
+    </ul>
+  </div><!-- end #ticker -->
+
+  <footer id="colophon">
+  </footer>
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
+  
+  <script type="text/javascript">
+    //  The Map
+    var map = new L.Map('map');
+    var cloudmade = new L.TileLayer('http://{s}.tile.cloudmade.com/722cd4e6aef34e85a546ab3abee59146/1714/256/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+        maxZoom: 18
+    });
+    var newyorkcity = new L.LatLng(40.73, -73.95); // geographical point (longitude and latitude)
+    map.setView(newyorkcity, 13).addLayer(cloudmade);
+
+    jQuery(function ($) {
+      $(document).ready(function() {
+
+        // add menu button for small screens
+        $('<a href="#" id="nav-bttn">&equiv;</a>').insertAfter('#site-title');
+
+        // toggle menu visibility
+        $('#nav-bttn').click(function(){
+          $('#access').toggleClass('expose');
+          return false; 
+        });
+        
+        $('.close-bttn').click(function(){
+          $('#content').toggle();
+          return false; 
+        });
+
+      });
+    });
+  </script>
+
+</body>
+</html>
