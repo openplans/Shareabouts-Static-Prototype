@@ -172,7 +172,7 @@ button {width: auto; overflow: visible;}
 -------------------------------------------------------------- */
 
 #content {
-  line-height: 25px;
+  line-height: 20px;
 }
 #content p {
   margin-bottom: 1.2em;
@@ -211,33 +211,90 @@ img.alignright {
 	margin-left: 1em;
 }
 
-/* Forms - Class for labelling required form items */
+/* Forms */
+fieldset {
+  padding-bottom: 1.2em;
+}
+label {
+  color: #888;
+  display: block;
+  font-weight: bold;
+}
 .required {
 	color: #cc0033;
 }
+.bttn {
+  background-color: #00aaff;
+  color: #f0f0f0;
+  padding: 0.75em 1em;
+  border: 0;
+  margin: 0 0 0.667em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 1px -1px 0 #06A;
+     -moz-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+  -webkit-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+          box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+}
+.bttn:hover {
+  color: #fff;
+}
 
-/* Comments */
-#comments-title,
-#reply-title {
-  color: #666;
+/* Feature Point */
+.point-header {
+  margin-bottom: 1em;
+}
+.point-header .comment-submitter {
+  font-size: 16px;
+}
+.description {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Discussion */
+.discussion {
+  position: relative;
+}
+.discussion-header {
+  border-bottom: 1px solid #A8A8A8;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+a.reply-link {
+  background: #A3C7D9;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 0.5em;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+a.reply-link:hover {
+  background: #00aaff;
 }
 ol.commentlist {
   list-style: none;
   margin-left: 0;
 }
-#comments .commentlist li.comment {
-  padding-bottom: 2em;
+.commentlist .comment {
+  padding-bottom: 1em;
 }
-#comments .commentlist .children {
+.commentlist .children {
   list-style: none;
   margin-left: 2em;
   margin-bottom: 0;
 }
-#comments .commentlist .children li.comment {
+.commentlist .children .comment {
   padding-top: 2em;
   padding-bottom: 0;
 }
-#comments li.bypostauthor {
+.commentlist .bypostauthor {
   background: #f7f7f7;
   padding: 0.5em  0.5em  2.5em;
   margin: 0 -0.5em;
@@ -245,19 +302,19 @@ ol.commentlist {
 article.comment {
 	display: block;
 }
-article.comment header {
-	margin-bottom: 1.2em;
+.comment-header {
 	line-height: 1.4;
+  margin-bottom: 1em;
 }
-article.comment header .avatar {
+.avatar {
   float: left;
   margin-right: 1.2em;
-  margin-bottom: 1.2em;
 }
 .comment-meta {
 }
 .comment-body {
-  clear: both;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
 }
 article.comment footer {
   text-align: right;
@@ -273,19 +330,23 @@ article.comment footer {
 	background: #607890;
 	color: #fff;
 }
-
-#respond input[type=text] {
-	float: left;
-	margin: 0 1em 0 0;
+.reply-header {
+}
+#reply input[type=text] {
 	width: 60%;
 }
-#respond .comment-form-comment label {
+#reply .comment-form-comment label {
 	display: none;
 }
-#respond textarea {
-	margin: 0 1em 1em 0;
-	float: left;
+#reply textarea {
 	width: 80%;
+}
+#reply p {
+}
+#reply p.comment-box {
+}
+.comment-box label {
+  display: none;
 }
 
 
@@ -311,7 +372,7 @@ body {
   height: 4em;
   padding: 0 1em;
 	position: relative;
-  z-index: 500;
+  z-index: 50;
      -moz-box-shadow: 0 4px 0 rgba(85, 85, 85, 0.5);
   -webkit-box-shadow: 0 4px 0 rgba(85, 85, 85, 0.5);
           box-shadow: 0 4px 0 rgba(85, 85, 85, 0.5);
@@ -365,7 +426,7 @@ body {
   text-align: center;
   float: left;
   position: relative;
-  z-index: 500;
+  z-index: 50;
 }
 #access.expose {
   display: block;
@@ -394,10 +455,12 @@ body {
   float: right;
   padding-top: 1.5em;
   line-height: 1.5;
+  position: relative;
 }
-#user-menu small {
+#user-menu .sign-in-text {
   float: left;
   text-transform: uppercase;
+  font-size: 85%;
 }
 .login {
   width: 16px;
@@ -425,7 +488,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10;
 }
 #map {
   height: 100%;
@@ -436,7 +499,7 @@ a.add-feature-point {
   right: 1em;
   bottom: 2em;
   left: 1em;
-  z-index: 150;
+  z-index: 15;
   background-color: #00aaff;
   color: #f0f0f0;
   padding: 0.75em 1em;
@@ -461,12 +524,12 @@ a.add-feature-point:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 400;
+  z-index: 40;
   overflow: visible;
 }
 #content > article {
   position: absolute;
-  top: 2.5em;
+  top: 3em;
   right: 0;
   bottom: 0;
   left: 0;
@@ -501,7 +564,7 @@ a.close-bttn span {
   left: auto;
   width: 18em;
   overflow: scroll;
-  z-index: 150;
+  z-index: 15;
      -moz-box-shadow: -4px 0 0 rgba(85, 85, 85, 0.5);
   -webkit-box-shadow: -4px 0 0 rgba(85, 85, 85, 0.5);
           box-shadow: -4px 0 0 rgba(85, 85, 85, 0.5);
@@ -529,7 +592,7 @@ a.close-bttn span {
   color: #ddd;
   text-decoration: none;
   position: relative;
-  z-index: 50;
+  z-index: 5;
 }
 #ticker a:hover {
   color: #fff;
@@ -571,7 +634,7 @@ a.close-bttn span {
     height: 1em;
     width: 1em;
     position: relative;
-    z-index: 50;
+    z-index: 5;
     top: -0.6em;
     right: 100%;
     left: auto;
@@ -617,7 +680,7 @@ a.close-bttn span {
   	position: absolute;
   	top: 3em;
   	left: 0;
-  	z-index: 99999;
+  	z-index: 9999;
        -moz-box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5); 
     -webkit-box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5); 
             box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5);
@@ -666,13 +729,16 @@ a.close-bttn span {
     right: 18.75em; /* width of ticker + extra 0.75em */
     left: 40%;
   }
+  #content > article {
+    padding: 2em;
+  }
   #ticker {
     display: block;
   }
   #user-menu {
     padding-top: 0.75em;
   }
-  #user-menu small {
+  #user-menu .sign-in-text {
     float: none;
     display: block;
   }

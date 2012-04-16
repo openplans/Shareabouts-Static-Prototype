@@ -39,7 +39,7 @@
     <h1 id="site-title"><a href="#">Shareabouts</a></h1>
 
     <div id="user-menu">
-      <small>Sign in with</small> <a href="#" class="login facebook-login">Facebook</a> <span class="hidden">or</span> <a href="#" class="login twitter-login">Twitter</a><span class="hidden">.</span>
+      <span class="sign-in-text">Sign in with</span> <a href="#" class="login facebook-login">Facebook</a> <span class="hidden">or</span> <a href="#" class="login twitter-login">Twitter</a><span class="hidden">.</span>
     </div>
 
     <nav id="access" role="article">
@@ -63,21 +63,29 @@
       <a href="#" class="add-feature-point">Add a location!</a>
     </div>
 
-    <div id          = "content">
-      <a href        = "#" class="close-bttn">&times;<span> Close</span></a>
-      <article class = "point"><!-- .point or .page -->
-        <header>
+    <div id="content">
+      <a href="#" class="close-bttn">&times;<span> Close</span></a>
+      <article class="point"><!-- .point or .page -->
+        <header class="point-header clearfix">
           <h1>Awesome Point Title</h1>
+          <img class="avatar" src="images/user-50.png" />
+          <strong class="comment-submitter"><a href="#">Frank</a></strong> added this point in Manhattan <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
         </header>
 
+        <section class="description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
         <section class="discussion">
-          <ol class="comments">
+          <h4 class="discussion-header">3 comments</h4>
+          <a href="#reply" class="reply-link">Leave a Comment</a>
+
+          <ol class="commentlist">
             <li>
               <article class="comment">
-                <header class="comment-header">
-                  <img class="avatar" src="http://placehold.it/50" />
-                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
-                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                <header class="comment-header clearfix">
+                  <img class="avatar" src="images/user-36.png" />
+                  <strong class="comment-submitter"><a href="#">Frank</a> </strong><span class="comment-date">on February 10, 2012 at 1:00 pm</span>
                 </header>
                 <div class="comment-body">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -87,10 +95,9 @@
 
             <li>
               <article class="comment">
-                <header class="comment-header">
-                  <img class="avatar" src="http://placehold.it/50" />
-                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
-                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                <header class="comment-header clearfix">
+                  <img class="avatar" src="images/user-36.png" />
+                  <strong class="comment-submitter"><a href="#">Frank</a> </strong><span class="comment-date">on February 10, 2012 at 1:00 pm</span>
                 </header>
                 <div class="comment-body">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -100,10 +107,9 @@
 
             <li>
               <article class="comment">
-                <header class="comment-header">
-                  <img class="avatar" src="http://placehold.it/50" />
-                  <strong class="comment-submitter"><a href="#">Frank</a></strong>
-                  <span class="comment-date">on February 10, 2012 at 1:00 pm</span>
+                <header class="comment-header clearfix">
+                  <img class="avatar" src="images/user-36.png" />
+                  <strong class="comment-submitter"><a href="#">Frank</a> </strong><span class="comment-date">on February 10, 2012 at 1:00 pm</span>
                 </header>
                 <div class="comment-body">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -111,6 +117,28 @@
               </article>
             </li>
           </ol>
+
+          <div id="reply">
+            <h4 class="reply-header">Leave a Comment</h4>
+            <form id="new_comment" class="new_comment" action="#" method="post">
+              <fieldset>
+                <p class="comment-box">
+                  <label for="comment_comment">Comment</label>
+                  <textarea cols="40" id="comment_comment" name="comment[comment]" rows="4"></textarea>
+                </p>
+                <p>
+                  <label for="comment_submitter_name">Your Name</label>
+                  <input id="comment_submitter_name" name="comment[submitter_name]" size="30" type="text">
+                </p>
+                <p>
+                  <label for="comment_submitter_email">Email Address</label>
+                  <input id="comment_submitter_email" name="comment[submitter_email]" size="30" type="text">
+                </p>
+              </fieldset>
+              <input name="commit" type="submit" value="Comment" class="bttn">
+            </form>
+          </div>
+
         </section><!-- end .discussion -->
       </article>
     </div><!-- end #content -->
@@ -119,127 +147,127 @@
   <div id="ticker">
     <ul>
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Long Island City</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Astoria</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Long Island City</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Astoria</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Greenpoint</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge vote"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Long Island City</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Astoria</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge comment"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Manhattan</a>
       </li>
 
       <li class="clearfix" data-id="137" data-feature-id="68">
-        <img class="avatar" src="http://placehold.it/28" />
+        <img class="avatar" src="images/user-28.png" />
         <span class="badge suggest"></span><!-- .suggest, .vote, or .comment -->
         <a href="#"><strong>Username</strong> added a point in Williamsburg</a>
       </li>
