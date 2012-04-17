@@ -515,6 +515,11 @@ a.add-feature-point {
 a.add-feature-point:hover {
   color: #fff;
 }
+#map .leaflet-popup-content-wrapper {
+     -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+}
 
 /* Content */
 #content {
@@ -596,6 +601,21 @@ a.close-bttn span {
 }
 #ticker a:hover {
   color: #fff;
+}
+#ticker .badge {
+  background: transparent url(../images/ticker-point.png) 0 0 no-repeat scroll;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 4px;
+}
+#ticker .comment {
+  background-image: url(../images/ticker-comment.png);
+}
+#ticker .vote {
+  background-image: url(../images/ticker-heart.png);
 }
 
 /* Footer */
