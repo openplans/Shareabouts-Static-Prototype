@@ -701,9 +701,9 @@ a.close-bttn span {
   	top: 3em;
   	left: 0;
   	z-index: 9999;
-       -moz-box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5); 
-    -webkit-box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5); 
-            box-shadow: -5px 5px 0px rgba(85, 85, 85, 0.5);
+       -moz-box-shadow: -4px 4px 0px rgba(85, 85, 85, 0.5); 
+    -webkit-box-shadow: -4px 4px 0px rgba(85, 85, 85, 0.5); 
+            box-shadow: -4px 4px 0px rgba(85, 85, 85, 0.5);
   }
   #access ul ul ul {
   	left: 100%;
