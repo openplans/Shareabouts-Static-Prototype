@@ -131,12 +131,10 @@ button {width: auto; overflow: visible;}
 /* =Nonsemantic Base Styles 
 -------------------------------------------------------------- */
 
-/* for image replacement */
-.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
-/* Hide for both screenreaders and browsers
+/* Hide for both screenreaders and browsers: 
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
 .hidden { display: none; visibility: hidden; } 
-/* Hide only visually, but have it available for screenreaders 
+/* Hide only visually, but have it available for screenreaders: 
    www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
 .visuallyhidden { position: absolute !important;    
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -150,204 +148,6 @@ button {width: auto; overflow: visible;}
 .clearfix:after { clear: both; }
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
-
-/* Alignment */
-.alignleft {
-	display: inline;
-	float: left;
-}
-.alignright {
-	display: inline;
-	float: right;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-/* =Content 
--------------------------------------------------------------- */
-
-#content {
-  line-height: 20px;
-}
-#content p {
-  margin-bottom: 1.2em;
-}
-#content ul,
-#content ol {
-  margin-bottom: 0.6em;
-}
-#content ul li,
-#content ol li {
-  padding-bottom: 0.6em;
-}
-#content dl {
-  margin-bottom: 0.6em;
-}
-#content dt,
-#content dd {
-}
-#content dt {
-  font-weight: 700;
-}
-#content dd {
-  margin-left: 1.8em;
-  padding-bottom: 0.6em;
-}
-
-/* Images */
-img {
-	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
-	height: auto; /* Override height to match resized width for correct aspect ratio. */
-}
-img.alignleft {
-	margin-right: 1em;
-}
-img.alignright {
-	margin-left: 1em;
-}
-
-/* Forms */
-fieldset {
-  padding-bottom: 1.2em;
-}
-label {
-  color: #888;
-  display: block;
-  font-weight: bold;
-}
-.required {
-	color: #cc0033;
-}
-.bttn {
-  background-color: #00aaff;
-  color: #f0f0f0;
-  padding: 0.75em 1em;
-  border: 0;
-  margin: 0 0 0.667em;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  text-shadow: 1px -1px 0 #06A;
-     -moz-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
-  -webkit-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
-          box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
-}
-.bttn:hover {
-  color: #fff;
-}
-
-/* Feature Point */
-.point-header {
-  margin-bottom: 1em;
-}
-.point-header .comment-submitter {
-  font-size: 16px;
-}
-.description {
-  font-size: 16px;
-  line-height: 26px;
-}
-
-/* Discussion */
-.discussion {
-  position: relative;
-}
-.discussion-header {
-  border-bottom: 1px solid #A8A8A8;
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
-}
-a.reply-link {
-  background: #A3C7D9;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0 0.5em;
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-a.reply-link:hover {
-  background: #00aaff;
-}
-ol.commentlist {
-  list-style: none;
-  margin-left: 0;
-}
-.commentlist .comment {
-  padding-bottom: 1em;
-}
-.commentlist .children {
-  list-style: none;
-  margin-left: 2em;
-  margin-bottom: 0;
-}
-.commentlist .children .comment {
-  padding-top: 2em;
-  padding-bottom: 0;
-}
-.commentlist .bypostauthor {
-  background: #f7f7f7;
-  padding: 0.5em  0.5em  2.5em;
-  margin: 0 -0.5em;
-}
-article.comment {
-	display: block;
-}
-.comment-header {
-	line-height: 1.4;
-  margin-bottom: 1em;
-}
-.avatar {
-  float: left;
-  margin-right: 1.2em;
-}
-.comment-meta {
-}
-.comment-body {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1em;
-}
-article.comment footer {
-  text-align: right;
-}
-.comment-reply-link {
-  color: #999;
-	background: #eee;
-  padding: 0.5em 0.75em;
-	text-decoration: none;
-  font-weight: bold;
-}
-.comment-reply-link:hover {
-	background: #607890;
-	color: #fff;
-}
-.reply-header {
-}
-#reply input[type=text] {
-	width: 60%;
-}
-#reply .comment-form-comment label {
-	display: none;
-}
-#reply textarea {
-	width: 80%;
-}
-#reply p {
-}
-#reply p.comment-box {
-}
-.comment-box label {
-  display: none;
-}
 
 
 /* =Structure & Layout
@@ -538,8 +338,23 @@ a.add-feature-point:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: scroll;
+  overflow: auto;
   padding: 1em;
+
+	background:
+		linear-gradient(white 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		radial-gradient(25% 0, farthest-side, rgba(0,0,0,0.25), rgba(0,0,0,0)),
+		radial-gradient(25% 100%,farthest-side, rgba(0,0,0,0.25), rgba(0,0,0,0)) 0 100%;
+	background:
+	  -webkit-linear-gradient(white 30%, rgba(255, 255, 255, 0)), 
+	  -webkit-linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, 
+	  -webkit-radial-gradient(25% 0, farthest-side, rgba(0, 0, 0, 0.25), transparent), 
+	  -webkit-radial-gradient(25% 100%,farthest-side, rgba(0, 0, 0, 0.25), transparent) 0 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: 100% 40px, 100% 40px, 150% 1.75em, 150% 1.75em;
+	background-attachment: local, local, scroll, scroll;
 }
 a.close-bttn {
   color: #ff5e99;
@@ -557,6 +372,184 @@ a.close-bttn span {
   font-size: 0.625em;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+#content {
+  line-height: 20px;
+}
+#content p {
+  margin-bottom: 1.2em;
+}
+#content ul,
+#content ol {
+  margin-bottom: 0.6em;
+}
+#content ul li,
+#content ol li {
+  padding-bottom: 0.6em;
+}
+#content dl {
+  margin-bottom: 0.6em;
+}
+#content dt,
+#content dd {
+}
+#content dt {
+  font-weight: 700;
+}
+#content dd {
+  margin-left: 1.8em;
+  padding-bottom: 0.6em;
+}
+
+/* Images */
+img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+
+/* Forms */
+fieldset {
+  padding-bottom: 1.2em;
+}
+label {
+  color: #888;
+  display: block;
+  font-weight: bold;
+}
+.required {
+	color: #cc0033;
+}
+.bttn {
+  background-color: #00aaff;
+  color: #f0f0f0;
+  padding: 0.75em 1em;
+  border: 0;
+  margin: 0 0 0.667em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 1px -1px 0 #06A;
+     -moz-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+  -webkit-box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+          box-shadow: -4px 4px 0 rgba(85, 85, 85, 0.5);
+}
+.bttn:hover {
+  color: #fff;
+}
+
+/* Feature Point */
+.point-header {
+  margin-bottom: 1em;
+}
+.point-header .comment-submitter {
+  font-size: 16px;
+}
+.description {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Discussion */
+.discussion {
+  position: relative;
+}
+.discussion-header {
+  border-bottom: 1px solid #A8A8A8;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+a.reply-link {
+  background: #A3C7D9;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 0.5em;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+a.reply-link:hover {
+  background: #00aaff;
+}
+ol.commentlist {
+  list-style: none;
+  margin-left: 0;
+}
+.commentlist .comment {
+  padding-bottom: 1em;
+}
+.commentlist .children {
+  list-style: none;
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+.commentlist .children .comment {
+  padding-top: 2em;
+  padding-bottom: 0;
+}
+.commentlist .bypostauthor {
+  background: #f7f7f7;
+  padding: 0.5em  0.5em  2.5em;
+  margin: 0 -0.5em;
+}
+article.comment {
+	display: block;
+}
+.comment-header {
+	line-height: 1.4;
+  margin-bottom: 1em;
+}
+.avatar {
+  float: left;
+  margin-right: 1.2em;
+}
+.comment-meta {
+}
+.comment-body {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+}
+article.comment footer {
+  text-align: right;
+}
+.comment-reply-link {
+  color: #999;
+	background: #eee;
+  padding: 0.5em 0.75em;
+	text-decoration: none;
+  font-weight: bold;
+}
+.comment-reply-link:hover {
+	background: #607890;
+	color: #fff;
+}
+.reply-header {
+}
+#reply input[type=text] {
+	width: 60%;
+}
+#reply .comment-form-comment label {
+	display: none;
+}
+#reply textarea {
+	width: 80%;
+}
+#reply p {
+}
+#reply p.comment-box {
+}
+.comment-box label {
+  display: none;
 }
 
 /* Ticker */
@@ -822,7 +815,7 @@ a.close-bttn span {
 -------------------------------------------------------------- */
 
 /* Uncomment the following to display the media query results in your browser. */
-/*body:after { content: "less than 320px"; font-size: 300%; font-weight: bold; position: fixed; bottom: 0; width: 100%; text-align: center; background-color: hsla(1,60%,40%,0.7); color: #fff; }
+/*body:after { content: "less than 320px"; font-size: 300%; font-weight: bold; position: fixed; bottom: 0; width: 100%; text-align: center; background-color: hsla(1,60%,40%,0.7); color: #fff; z-index: 99999; }
 @media only screen and (min-width: 320px) { body:after { content: "320 to 479px"; background-color: hsla(90,60%,40%,0.7); } }
 @media only screen and (min-width: 480px) { body:after { content: "480 to 767px"; background-color: hsla(180,60%,40%,0.7); } }
 @media only screen and (min-width: 768px) { body:after { content: "768 to 1023px"; background-color: hsla(270,60%,40%,0.7); } }
